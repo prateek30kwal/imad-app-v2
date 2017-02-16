@@ -6,7 +6,7 @@ var articles={
     'articleOne':{
             title:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
             heading:'ARTICLE-ONE',
-            date:'18-feb-2017',
+            date:'16-feb-2017',
             content:`
                 
                 
