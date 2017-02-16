@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var articles={
-    'Article-one':{
+    'articleone':{
             title:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
             heading:'ARTICLE-ONE',
             date:'16-feb-2017',
@@ -18,7 +18,7 @@ var articles={
                         APP.<br>
                     </p>
                 </div>`},
-    'Article-two':{
+    'articletwo':{
             title:'THIS IS THE NEW PAGE OF ARTICLE-TWO',
             heading:'ARTICLE-TWO',
             date:'18-feb-2017',
@@ -34,7 +34,7 @@ var articles={
                     </p>
                 </div>`
     },
-    'Article-three':{
+    'articlethree':{
         title:'THIS IS THE NEW PAGE OF ARTICLE-THREE',
             heading:'ARTICLE-THREE',
             date:'20-feb-2017',
