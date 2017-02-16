@@ -2,6 +2,58 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var articleOne ={
+    tile:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
+    heading:'ARTICLE-ONE',
+    date:'16-feb-2017',
+    content:`
+        
+        
+        <div>
+            <p>
+                HELLO FRIENDS THIS IS MY FIRST WEB PAGE ON THE HASURA-APP.IO<br>
+                AND I AM VERY THANKFUL TO THE TEAM OF HASURA AND NPTEL TEAM THAT <br>
+                THEY PROVIDE A GREAT OPPPORTUNITY BY PROVIDING A PLATFORM TO BUILD OUR OWN <br>
+                APP.<br>
+            </p>
+        </div>`
+      
+         
+};
+
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+    var date=data.date;
+            var htmlcontent= `
+                   
+                <html>
+                <head>
+                    <title>
+                    ${title}
+                    </title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <link href="/ui/style.css" rel="stylesheet" />
+                    
+                </head>
+                <body>
+                  <div class="container">
+                    <div>
+                        <a href="/">HOME</a>
+                    </div>
+                    <hr/>
+                    <h2>${heading}</h2>
+                    <div>
+                        <h3>${date}</h3>
+                    </div>
+                    ${content}
+                  </div>
+                </body>
+            </html>
+            `;
+            return htmlcontent;
+}
 var app = express();
 app.use(morgan('combined'));
 
@@ -10,7 +62,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'Article-one.html'));
+    res.send(createTemplate(articleOne)); 
 });
 app.get('/article-two',function(req, res){
     res.sendFile(path.join(__dirname, 'ui', 'Article-two.html'));
