@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var articleOne ={
-    tile:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
+    title:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
     heading:'ARTICLE-ONE',
     date:'17-feb-2017',
     content:`
