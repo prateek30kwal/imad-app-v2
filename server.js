@@ -5,7 +5,7 @@ var path = require('path');
 var articleOne ={
     title:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
     heading:'ARTICLE-ONE',
-    date:'17-feb-2017',
+    date:'18-feb-2017',
     content:`
         
         
