@@ -2,6 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var app = express();
+app.use(morgan('combined'));
+
 var articles={
     'article-one':{
             title:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
@@ -87,8 +90,7 @@ function createTemplate(data){
             `;
             return htmlcontent;
 }
-var app = express();
-app.use(morgan('combined'));
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
