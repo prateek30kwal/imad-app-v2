@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-/*var articles={
+var articles={
     'article-one':{
             title:'THIS IS THE NEW PAGE OF ARTICLE -ONE',
             heading:'ARTICLE-ONE',
@@ -89,18 +89,18 @@ function createTemplate(data){
             </html>
             `;
             return htmlcontent;
-}*/
+}
 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/*app.get('/:articleName',function(req, res){
+app.get('/:articleName',function(req, res){
     var articleName=req.params.articleName;
     
     res.send(createTemplate(articles[articleName])); 
-});
+});/*
 app.get('/article-two',function(req, res){
     res.sendFile(path.join(__dirname, 'ui', 'Article-two.html'));
 });
